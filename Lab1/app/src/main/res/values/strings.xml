@@ -5,7 +5,7 @@
     <string name="multiplication_btn_text">*</string>
     <string name="division_btn_text">/</string>
     <string name="addition_btn_text">+</string>
-    <string name="substraction_btn_text">-</string>
+    <string name="subtraction_btn_text">-</string>
     <string name="result_label_text">Result:</string>
     <string name="value_error_msg">Wrong argument values</string>
     <string name="zero_div_error_msg">Zero division is not allowed in this Galaxy!</string>

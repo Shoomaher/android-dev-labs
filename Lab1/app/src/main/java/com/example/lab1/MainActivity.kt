@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity() {
     /**
      * Subsctract one number from another
      *
-     * @param a value from which we substract
-     * @param b value which we substract from another
+     * @param a value from which we subtract
+     * @param b value which we subtract from another
      * @return result of subtraction
      */
-    fun substract(a: Double, b: Double):Double {
+    fun subtract(a: Double, b: Double):Double {
         return a - b
     }
 
