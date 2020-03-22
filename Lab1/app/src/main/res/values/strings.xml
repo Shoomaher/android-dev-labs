@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab1 - Calculator</string>
+    <string name="first_arg_placeholder">1st arg</string>
+    <string name="second_arg_placeholder">2nd arg</string>
+    <string name="multiplication_btn_text">*</string>
+    <string name="division_btn_text">/</string>
+    <string name="addition_btn_text">+</string>
+    <string name="substraction_btn_text">-</string>
+    <string name="result_label_text">Result:</string>
+    <string name="value_error_msg">Wrong argument values</string>
+    <string name="zero_div_error_msg">Zero division is not allowed in this Galaxy!</string>
+</resources>
