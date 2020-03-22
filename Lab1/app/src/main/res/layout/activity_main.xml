@@ -75,6 +75,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="subtractionButtonHandler"
         android:text="@string/subtraction_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondArgInput" />
@@ -86,6 +87,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="additionButtonHandler"
         android:text="@string/addition_btn_text"
         app:layout_constraintEnd_toStartOf="@+id/subtractionButton"
         app:layout_constraintTop_toBottomOf="@+id/secondArgInput" />

@@ -2,6 +2,7 @@ package com.example.lab1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -81,6 +82,32 @@ class MainActivity : AppCompatActivity() {
             ).show()
         }
         return null
+    }
+
+    /**
+     * Handle addition button click
+     *
+     * @param view view, thar was clicked
+     */
+    fun additionButtonHandler(view: View) {
+        val resultTextLabel = findViewById<TextView>(R.id.calcResultLabel)
+        val firstArgText = findViewById<TextView>(R.id.firstArgInput)
+        val secondArgText = findViewById<TextView>(R.id.secondArgInput)
+
+        resultTextLabel.text = performCalculation(firstArgText.text.toString(), secondArgText.text.toString(), ::add)?.toString()
+    }
+
+    /**
+     * Handle subtraction button click
+     *
+     * @param view view, thar was clicked
+     */
+    fun subtractionButtonHandler(view: View) {
+        val resultTextLabel = findViewById<TextView>(R.id.calcResultLabel)
+        val firstArgText = findViewById<TextView>(R.id.firstArgInput)
+        val secondArgText = findViewById<TextView>(R.id.secondArgInput)
+
+        resultTextLabel.text = performCalculation(firstArgText.text.toString(), secondArgText.text.toString(), ::subtract)?.toString()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
