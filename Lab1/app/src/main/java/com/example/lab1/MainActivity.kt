@@ -31,11 +31,18 @@ class MainActivity : AppCompatActivity() {
             val secondArg = b.toDouble()
 
             val result = action(firstArg, secondArg)
+            if (result == Double.POSITIVE_INFINITY) {
+                Toast.makeText(applicationContext, resources.getText(R.string.zero_div_error_msg), Toast.LENGTH_SHORT).show()
+                return null
+            }
+
             return result
         } catch (e: java.lang.NumberFormatException) {
-            Toast.makeText(applicationContext, resources.getText(R.string.value_error_msg), Toast.LENGTH_SHORT).show()
-        } catch (e: java.lang.ArithmeticException) {
-            Toast.makeText(applicationContext, resources.getText(R.string.zero_div_error_msg), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                applicationContext,
+                resources.getText(R.string.value_error_msg),
+                Toast.LENGTH_SHORT
+            ).show()
         }
         return null
     }
