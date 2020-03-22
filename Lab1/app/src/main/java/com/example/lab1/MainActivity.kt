@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     fun performCalculation(a: String, b: String, action: (Double, Double) -> Double): Double? {
         try {
-            var firstArg = a.toDouble()
-            var secondArg = b.toDouble()
+            val firstArg = a.toDouble()
+            val secondArg = b.toDouble()
 
-            var result = action(firstArg, secondArg)
+            val result = action(firstArg, secondArg)
             return result
         } catch (e: java.lang.NumberFormatException) {
             Toast.makeText(applicationContext, resources.getText(R.string.value_error_msg), Toast.LENGTH_SHORT).show()
@@ -44,16 +44,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var resultTextLabel = findViewById<TextView>(R.id.calcResultLabel)
-        var firstArgText = findViewById<TextView>(R.id.firstArgInput)
-        var secondArgText = findViewById<TextView>(R.id.secondArgInput)
+        val resultTextLabel = findViewById<TextView>(R.id.calcResultLabel)
+        val firstArgText = findViewById<TextView>(R.id.firstArgInput)
+        val secondArgText = findViewById<TextView>(R.id.secondArgInput)
 
-        var multiplicationButton = findViewById<Button>(R.id.multiplicationButton)
+        val multiplicationButton = findViewById<Button>(R.id.multiplicationButton)
         multiplicationButton.setOnClickListener{
             resultTextLabel.text = performCalculation(firstArgText.text.toString(), secondArgText.text.toString(), ::multiply)?.toString()
         }
 
-        var divisionButton = findViewById<Button>(R.id.divisionButton)
+        val divisionButton = findViewById<Button>(R.id.divisionButton)
         divisionButton.setOnClickListener{
             resultTextLabel.text = performCalculation(firstArgText.text.toString(), secondArgText.text.toString(), ::divide)?.toString()
         }
