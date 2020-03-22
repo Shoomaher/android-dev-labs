@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
      * @param action function that gonna be executed for 2 numbers
      * @return result of calculation or null if smth went wrong
      */
-    fun performCalculation(a: String, b: String, action: (Double, Double) -> Double): Double? {
+    private fun performCalculation(a: String, b: String, action: (Double, Double) -> Double): Double? {
         try {
             val firstArg = a.toDouble()
             val secondArg = b.toDouble()
