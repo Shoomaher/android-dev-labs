@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="app_title">CoronaVirus activity help</string>
+    <string name="i_have_virus_btn_text">Help me! I have CoronaVirus</string>
+    <string name="corona_virus_detected_activity_title">Keep calm. Our specialists are already going to you!</string>
+    <string name="presentation_title">Take a look at the presentation about them:</string>
+    <string name="specialists_preview_video_url">https://www.youtube.com/watch?v=xqMsZc__KGQ</string>
+    <string name="make_a_will_btn_text">Make a will</string>
+    <string name="go_back_btn_text">Go back</string>
+    <string name="no_way_back_text">There is no way back!</string>
+    <string name="no_way_dude_text">NO WAY, DUDE!</string>
+    <string name="will_header">I have CoronaVirus! I am gonna die very soon. Here is my will</string>
+    <string name="will_template">I, ___, resident in the City of ___, Country of ___, State of ___, \
+        being of sound ming, not acting under durres or undue influence and fully understanding the \
+        nature and extent of all my property and of this disposition thereof, do hereby make, publish \
+        and declare this document to be my Last Will and Testament, and hereby revoke and all other \
+        wills and codicils heretofore made by me.
+    </string>
+    <string name="unable_create_will">Oh, unable to send a will :(</string>
+    <string name="persistent_user_text">Good Job! Such a persistent man</string>
+</resources>
