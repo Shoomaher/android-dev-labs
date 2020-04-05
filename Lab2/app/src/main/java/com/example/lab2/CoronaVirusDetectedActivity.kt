@@ -17,6 +17,7 @@ class CoronaVirusDetectedActivity : AppCompatActivity() {
 
         val makeWillBtn = findViewById<Button>(R.id.MakeWillBtn)
 
+        // Well, the only way is create a will and send it to your lawyer
         makeWillBtn.setOnClickListener {
             val sendWill = Intent(Intent.ACTION_SEND)
             sendWill.setType("text/plain")
@@ -32,6 +33,9 @@ class CoronaVirusDetectedActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.unable_create_will, Toast.LENGTH_SHORT).show()
         }
 
+        /**
+         * Going back available only for very persistent users
+         */
         var backBtnClicks = 0
         val goBackBtn = findViewById<Button>(R.id.GoBackBtn)
         goBackBtn.setOnClickListener {
