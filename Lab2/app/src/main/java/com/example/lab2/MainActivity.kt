@@ -1,11 +1,16 @@
 package com.example.lab2
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+    val REQUEST_CODE = 120
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,7 +20,18 @@ class MainActivity : AppCompatActivity() {
 
         coronaVirusDetected.setOnClickListener {
             val intent = Intent(this, CoronaVirusDetectedActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, REQUEST_CODE)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_CANCELED) {
+                val appHeader:TextView = findViewById<TextView>(R.id.activityHeader)
+                appHeader.text = getString(R.string.persistent_user_text)
+            }
         }
     }
 }

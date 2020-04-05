@@ -1,5 +1,6 @@
 package com.example.lab2
 
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
@@ -30,5 +31,20 @@ class CoronaVirusDetectedActivity : AppCompatActivity() {
             else
                 Toast.makeText(this, R.string.unable_create_will, Toast.LENGTH_SHORT).show()
         }
+
+        var backBtnClicks = 0
+        val goBackBtn = findViewById<Button>(R.id.GoBackBtn)
+        goBackBtn.setOnClickListener {
+            Toast.makeText(this, R.string.no_way_back_text, Toast.LENGTH_SHORT).show()
+            backBtnClicks++
+            if (backBtnClicks > 5) {
+                setResult(Activity.RESULT_CANCELED)
+                finish()
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(this, R.string.no_way_dude_text, Toast.LENGTH_SHORT).show()
     }
 }
