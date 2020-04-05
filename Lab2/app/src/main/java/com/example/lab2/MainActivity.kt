@@ -10,6 +10,7 @@ import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
+    //Just to detect this app
     val REQUEST_CODE = 120
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == REQUEST_CODE) {
             if (resultCode == Activity.RESULT_CANCELED) {
+                // For lucky ones
                 val appHeader:TextView = findViewById<TextView>(R.id.activityHeader)
                 appHeader.text = getString(R.string.persistent_user_text)
             }
