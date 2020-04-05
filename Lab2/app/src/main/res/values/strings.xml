@@ -2,5 +2,11 @@
     <string name="app_name">Lab2</string>
     <string name="app_title">CoronaVirus activity help</string>
     <string name="i_have_virus_btn_text">Help me! I have CoronaVirus</string>
+    <string name="corona_virus_detected_activity_title">Keep calm. Our specialists are already going to you!</string>
+    <string name="presentation_title">Take a look at the presentation about them:</string>
     <string name="specialists_preview_video_url">https://www.youtube.com/watch?v=xqMsZc__KGQ</string>
+    <string name="make_a_will_btn_text">Make a will</string>
+    <string name="go_back_btn_text">Go back</string>
+    <string name="no_way_back_text">There is no way back!</string>
+    <string name="no_way_dude_text">NO WAY, DUDE!</string>
 </resources>
